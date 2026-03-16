@@ -84,7 +84,7 @@ export default function SummaryCards({ transactions }: SummaryCardsProps) {
             <card.icon className={`h-4 w-4 ${card.accent}`} />
           </div>
           <p className={`text-display tabular-nums ${card.accent}`}>
-            ${Math.abs(card.value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            {formatAmount(card.value)}
           </p>
           {card.change !== undefined && card.change !== 0 && (
             <p className={`text-xs mt-1 ${card.change > 0 ? "text-destructive" : "text-success"}`}>

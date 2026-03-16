@@ -48,9 +48,9 @@ export default function Auth() {
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
             <TrendingUp className="h-6 w-6 text-primary" />
           </div>
-          <h1 className="text-display text-foreground">Lumen</h1>
+           <h1 className="text-display text-foreground">Spendy</h1>
           <p className="mt-2 text-body text-muted-foreground">
-            Your net worth, projected.
+            Smart spending, smarter saving.
           </p>
         </div>
 
