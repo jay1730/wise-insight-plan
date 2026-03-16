@@ -59,6 +59,7 @@ const Index = () => {
           </div>
           <div className="space-y-6">
             <AddTransactionForm />
+            <AIAgent transactions={transactions} />
             <AIInsights transactions={transactions} />
           </div>
         </div>
