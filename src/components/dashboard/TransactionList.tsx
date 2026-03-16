@@ -3,6 +3,7 @@ import { Trash2, TrendingUp, TrendingDown } from "lucide-react";
 import type { Transaction } from "@/hooks/useTransactions";
 import { useDeleteTransaction } from "@/hooks/useTransactions";
 import { CATEGORY_COLORS } from "@/lib/constants";
+import { useCurrency } from "@/hooks/useCurrency";
 
 interface TransactionListProps {
   transactions: Transaction[];
