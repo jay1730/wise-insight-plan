@@ -8,6 +8,7 @@ interface SummaryCardsProps {
 }
 
 export default function SummaryCards({ transactions }: SummaryCardsProps) {
+  const { formatAmount } = useCurrency();
   const now = new Date();
   const thisMonth = transactions.filter((t) => {
     const d = new Date(t.date);
