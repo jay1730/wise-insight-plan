@@ -11,6 +11,7 @@ interface TransactionListProps {
 
 export default function TransactionList({ transactions }: TransactionListProps) {
   const deleteMutation = useDeleteTransaction();
+  const { formatAmount } = useCurrency();
 
   if (transactions.length === 0) {
     return (
