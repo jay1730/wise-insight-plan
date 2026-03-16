@@ -8,6 +8,7 @@ import CategoryBreakdown from "@/components/dashboard/CategoryBreakdown";
 import TransactionList from "@/components/dashboard/TransactionList";
 import AddTransactionForm from "@/components/dashboard/AddTransactionForm";
 import AIInsights from "@/components/dashboard/AIInsights";
+import AIAgent from "@/components/dashboard/AIAgent";
 import { Loader2 } from "lucide-react";
 
 const Index = () => {
