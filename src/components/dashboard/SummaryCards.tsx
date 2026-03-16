@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TrendingUp, TrendingDown, Wallet, Target } from "lucide-react";
 import type { Transaction } from "@/hooks/useTransactions";
+import { useCurrency } from "@/hooks/useCurrency";
 
 interface SummaryCardsProps {
   transactions: Transaction[];
