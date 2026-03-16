@@ -3,6 +3,7 @@ import { Trash2, TrendingUp, TrendingDown } from "lucide-react";
 import type { Transaction } from "@/hooks/useTransactions";
 import { useDeleteTransaction } from "@/hooks/useTransactions";
 import { CATEGORY_COLORS } from "@/lib/constants";
+import { useCurrency } from "@/hooks/useCurrency";
 
 interface TransactionListProps {
   transactions: Transaction[];
@@ -10,6 +11,7 @@ interface TransactionListProps {
 
 export default function TransactionList({ transactions }: TransactionListProps) {
   const deleteMutation = useDeleteTransaction();
+  const { formatAmount } = useCurrency();
 
   if (transactions.length === 0) {
     return (
@@ -61,8 +63,7 @@ export default function TransactionList({ transactions }: TransactionListProps) 
                   tx.type === "income" ? "text-success" : "text-foreground"
                 }`}
               >
-                {tx.type === "income" ? "+" : "-"}$
-                {Number(tx.amount).toLocaleString("en-US", { minimumFractionDigits: 2 })}
+                {tx.type === "income" ? "+" : "-"}{formatAmount(Number(tx.amount))}
               </p>
 
               <button

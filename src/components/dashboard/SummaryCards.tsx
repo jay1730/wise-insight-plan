@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { TrendingUp, TrendingDown, Wallet, Target } from "lucide-react";
 import type { Transaction } from "@/hooks/useTransactions";
+import { useCurrency } from "@/hooks/useCurrency";
 
 interface SummaryCardsProps {
   transactions: Transaction[];
 }
 
 export default function SummaryCards({ transactions }: SummaryCardsProps) {
+  const { formatAmount } = useCurrency();
   const now = new Date();
   const thisMonth = transactions.filter((t) => {
     const d = new Date(t.date);
@@ -82,7 +84,7 @@ export default function SummaryCards({ transactions }: SummaryCardsProps) {
             <card.icon className={`h-4 w-4 ${card.accent}`} />
           </div>
           <p className={`text-display tabular-nums ${card.accent}`}>
-            ${Math.abs(card.value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            {formatAmount(card.value)}
           </p>
           {card.change !== undefined && card.change !== 0 && (
             <p className={`text-xs mt-1 ${card.change > 0 ? "text-destructive" : "text-success"}`}>
