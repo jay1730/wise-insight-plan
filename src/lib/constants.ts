@@ -1,0 +1,48 @@
+export const EXPENSE_CATEGORIES = [
+  "Housing",
+  "Transportation",
+  "Food & Dining",
+  "Utilities",
+  "Healthcare",
+  "Insurance",
+  "Entertainment",
+  "Shopping",
+  "Education",
+  "Personal Care",
+  "Subscriptions",
+  "Travel",
+  "Gifts & Donations",
+  "Other",
+] as const;
+
+export const INCOME_CATEGORIES = [
+  "Salary",
+  "Freelance",
+  "Investments",
+  "Rental Income",
+  "Business",
+  "Other Income",
+] as const;
+
+export const CATEGORY_COLORS: Record<string, string> = {
+  Housing: "hsl(226, 70%, 55%)",
+  Transportation: "hsl(262, 60%, 55%)",
+  "Food & Dining": "hsl(38, 92%, 50%)",
+  Utilities: "hsl(180, 60%, 45%)",
+  Healthcare: "hsl(0, 84%, 60%)",
+  Insurance: "hsl(200, 60%, 50%)",
+  Entertainment: "hsl(320, 60%, 55%)",
+  Shopping: "hsl(280, 60%, 55%)",
+  Education: "hsl(160, 60%, 45%)",
+  "Personal Care": "hsl(340, 60%, 55%)",
+  Subscriptions: "hsl(210, 60%, 50%)",
+  Travel: "hsl(142, 70%, 45%)",
+  "Gifts & Donations": "hsl(30, 70%, 50%)",
+  Other: "hsl(240, 5%, 55%)",
+  Salary: "hsl(142, 70%, 45%)",
+  Freelance: "hsl(160, 60%, 50%)",
+  Investments: "hsl(226, 70%, 55%)",
+  "Rental Income": "hsl(38, 92%, 50%)",
+  Business: "hsl(200, 60%, 50%)",
+  "Other Income": "hsl(240, 5%, 55%)",
+};
